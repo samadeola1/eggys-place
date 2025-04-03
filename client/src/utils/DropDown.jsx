@@ -28,7 +28,7 @@ export const LocationDropDownFN = () => {
             <a>Delta</a>
           </li>
           <li>
-            <a>Delta</a>
+            <a>Abuja</a>
           </li>
           <li>
             <a> Lagos</a>
