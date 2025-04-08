@@ -91,7 +91,7 @@ getMenu()
                   return (
                     <div
                       key={_id}
-                      className="card bg-[#252422] w-full md:w-[340px] lg:w-[98%]  p-[16px] my-10 md:my-0 shadow-sm"
+                      className="card bg-[#252422] w-full md:w-[340px] lg:w-[98%]  p-[15px] my-10 md:my-0 shadow-sm"
                     >
                       <Link to={`/product/${_id}`}>
                         <figure>
