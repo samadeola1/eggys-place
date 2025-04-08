@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-// import { categoryList, menuItems } from "../../db";
+import { categoryList} from "../../db";
 import MyButton from "../../components/MyButton";
 import SearchField from "../../components/SearchField";
 import FieldSet from "./FieldSet";
