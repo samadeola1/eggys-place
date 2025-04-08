@@ -4,7 +4,7 @@ import MyButton from "../MyButton";
 import { calculateTotalPrice } from "../../utils/CartUtils";
 import { Link } from "react-router-dom";
 
-const CartSummary = () => {
+const CheckoutSummary = () => {
   const { cart } = useContext(CartContext);
   const totalPrice = calculateTotalPrice(cart);
 
@@ -47,7 +47,7 @@ const CartSummary = () => {
       <div className="mt-4">
         <Link to="/checkout">
           <MyButton
-            text="Check Out"
+            text="Pay now"
             className="w-full h-[56px] text-[20px] font-[500] "
           />
         </Link>
@@ -56,4 +56,4 @@ const CartSummary = () => {
   );
 };
 
-export default CartSummary;
+export default CheckoutSummary;

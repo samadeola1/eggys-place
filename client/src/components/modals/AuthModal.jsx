@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import SignIn from "../../auth/SignIn";
 import SignUp from "../../auth/SignUp";
 import navLogo from "../../assets/nav-logo.svg"
+import Home from "../../pages/Home";
 
 const AuthModal = ({ text, isOpen, onClose }) => {
   const [isSignUp, setIsSignUp] = useState(false);
+  const [isSignIn,setIsSignIn] = useState(false)
+  
 
   function closeModal() {
     const modal = document.getElementById('my_modal_2');
@@ -37,7 +40,8 @@ const AuthModal = ({ text, isOpen, onClose }) => {
 
             <img src={navLogo} alt="nav-logo" />
           </div>
-          {isSignUp ? <SignUp switchToSignIn={() => setIsSignUp(false)} /> : <SignIn switchToSignUp={() => setIsSignUp(true)} />}
+          {isSignUp ? <SignUp switchToSignIn={() => setIsSignUp(false)} /> : <SignIn switchToSignUp={() => setIsSignUp(true)}  />}
+            {isSignIn ? <Home switchToHome = {()=>setIsSignIn(false)}/>: ""}
         </div>
       </dialog>
     </>
