@@ -131,8 +131,8 @@ const Recipient = () => {
 
       {/* Recipient Modal */}
       {showRecipientModal && (
-        <div className="fixed inset-0 main-wrapper  bg-no-repeat bg-cover bg-center bg-opacity-50 flex items-center justify-center">
-          <div className="bg-black p-6 rounded-lg w-96">
+        <div className="fixed z-10 inset-0 main-wrapper  bg-no-repeat bg-cover bg-center bg-opacity-50 flex items-center justify-center">
+          <div className="bg-black p-6 rounded-lg w-96 ">
             <h2 className="text-xl font-bold mb-4">Recipient Information</h2>
             {recipientError && (
               <p className="text-red-500 text-sm mb-4">{recipientError}</p>
@@ -203,7 +203,7 @@ const Recipient = () => {
 
       {/* Delivery Modal */}
       {showDeliveryModal && (
-        <div className="fixed inset-0 main-wrapper  bg-no-repeat bg-cover bg-center bg-opacity-50 flex items-center justify-center">
+        <div className="fixed z-10 inset-0 main-wrapper  bg-no-repeat bg-cover bg-center bg-opacity-50 flex items-center justify-center">
           <div className="bg-black p-6 rounded-lg w-96">
             <h2 className="text-xl font-bold mb-4">Delivery Address</h2>
             {deliveryError && (

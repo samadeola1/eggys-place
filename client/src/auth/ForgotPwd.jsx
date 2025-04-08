@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { yupResolver } from "@hookform/resolvers/yup";
 import LoadingRing from "../utils/Loader";
 
+const baseUrl = import.meta.env.VITE_API_URL;
 const ForgotPwd = () => {
   const {
     register,
@@ -23,7 +24,7 @@ const ForgotPwd = () => {
   const handleForgotPwd = async (data) => {
     try {
       const req = await fetch(
-        "http://localhost:4040/api/auth/forgot-password",
+        `${baseUrl}/api/auth/forgot-password`,
         {
           method: "POST",
           headers: {
@@ -35,11 +36,10 @@ const ForgotPwd = () => {
       const res = await req.json();
       console.log(res);
       if (!res.success) {
-        toast.error(res.errMsg)
+        toast.error(res.errMsg);
       }
       if (res.success) {
-        toast.success(res.message)
-        
+        toast.success(res.message);
       }
     } catch (error) {}
   };
