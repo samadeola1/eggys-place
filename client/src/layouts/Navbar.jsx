@@ -105,7 +105,7 @@ const Navbar = () => {
               </li>
               <li className="">
                 {user ? (
-                  <div className="dropdown dropdown-center text-white my-2 ">
+                  <div className="dropdown dropdown-center cursor-pointer text-white my-2 ">
                     <div
                       tabIndex={0}
                       role="button"

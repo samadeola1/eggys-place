@@ -81,7 +81,7 @@ const Recipient = () => {
 
           <button
             onClick={() => setShowRecipientModal(true)}
-            className="text-[#B67B0F] mx-4 px-4 py-2 my-4"
+            className="text-[#B67B0F] cursor-pointer mx-4 px-4 py-2 my-4"
           >
             {recipientInfo.fullName ? "Edit" : "Add"}
           </button>
@@ -105,7 +105,7 @@ const Recipient = () => {
           </h2>{" "}
           <button
             onClick={() => setShowDeliveryModal(true)}
-            className="text-[#B67B0F]  px-4 py-2 my-4 mx-4"
+            className="text-[#B67B0F] cursor-pointer  px-4 py-2 my-4 mx-4"
           >
             {deliveryInfo.address ? "Change" : "Add"}
           </button>
@@ -124,7 +124,7 @@ const Recipient = () => {
       {/* Clear Data Button */}
       <button
         onClick={clearLocalStorage}
-        className="bg-[#B67B0F] mx-4  text-white px-4 py-2 my-3 rounded hover:bg-[#A56C0D]"
+        className="bg-[#B67B0F] mx-4 cursor-pointer text-white px-4 py-2 my-3 rounded hover:bg-[#A56C0D]"
       >
         Clear All Data
       </button>
@@ -185,13 +185,13 @@ const Recipient = () => {
                 <button
                   type="button"
                   onClick={() => setShowRecipientModal(false)}
-                  className="mr-2 px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                  className="mr-2 px-4 py-2 bg-[#B67B0F] cursor-pointer rounded hover:bg-[#A56C0D]"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-[#B67B0F] text-white rounded hover:bg-[#A56C0D]"
+                  className="px-4 py-2 bg-[#B67B0F] text-white cursor-pointer rounded hover:bg-[#A56C0D]"
                 >
                   Save
                 </button>
@@ -255,13 +255,13 @@ const Recipient = () => {
                 <button
                   type="button"
                   onClick={() => setShowDeliveryModal(false)}
-                  className="mr-2 px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                  className="mr-2 px-4 py-2 bg-[#B67B0F] cursor-pointer rounded hover:bg-[#A56C0D]"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-[#B67B0F] text-white rounded hover:bg-[#A56C0D]"
+                  className="px-4 py-2 bg-[#B67B0F] text-white cursor-pointer rounded hover:bg-[#A56C0D]"
                 >
                   Save
                 </button>

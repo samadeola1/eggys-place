@@ -68,17 +68,17 @@ const CartItems = () => {
                 </div>
                 <div className="flex items-center gap-4">
                   <h2
-                    className="text-center cursor-pointer bg-[#B67B0F] text-[#FBFBFB]  p-[4px] rounded-[17px] h-[32px] w-[32px]"
-                    onClick={() => handleInc(cart, setCart, _id)}
-                  >
-                    +
-                  </h2>
-                  <p> {quantity} </p>
-                  <h2
                     className=" text-center cursor-pointer bg-[#B67B0F] text-[#FBFBFB]  p-[4px] rounded-[17px] h-[32px] w-[32px]"
                     onClick={() => handleDec(cart, setCart, _id)}
                   >
                     -
+                  </h2>
+                  <p> {quantity} </p>
+                  <h2
+                    className="text-center cursor-pointer bg-[#B67B0F] text-[#FBFBFB]  p-[4px] rounded-[17px] h-[32px] w-[32px]"
+                    onClick={() => handleInc(cart, setCart, _id)}
+                  >
+                    +
                   </h2>
                 </div>
               </div>
