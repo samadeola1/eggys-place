@@ -9,11 +9,16 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { signInSchema } from "../utils/ValidationSchema";
 import { toast } from "sonner";
 import LoadingRing from "../utils/Loader";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const baseUrl = import.meta.env.VITE_API_URL;
 
-const SignIn = ({ switchToHome, switchToSignUp }) => {
+
+const SignIn = ({switchToSignUp }) => {
   const [isReveal, setIsReveal] = useState(false);
+  const {login} = useAuth()
+  const navigate = useNavigate();
   function togglePwd() {
     setIsReveal((prev) => !prev);
   }
@@ -45,8 +50,10 @@ const SignIn = ({ switchToHome, switchToSignUp }) => {
       if (res.success) {
         toast.success(res.message);
         localStorage.setItem("customerToken", res.user.token);
+        login(res.user.token,res.user);
+          navigate("/");
         reset();
-        switchToHome();
+     
       }
     } catch (error) {
       console.log(error.message);

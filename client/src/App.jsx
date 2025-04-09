@@ -13,6 +13,8 @@ import ResetPwd from "./auth/ResetPwd";
 import ForgotPwd from "./auth/ForgotPwd"
 import ErrorPage from "./pages/ErrorPage";
 import Checkout from "./features/cart/Checkout";
+import Order from "./pages/Order";
+import PrivateRoute from "./routes/PrivateRoute.jsx";
 
 
 // const cartItemsFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || []
@@ -97,12 +99,22 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/product/:productId" element={<Product />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/checkout" element={<Checkout/>}/>
+              <Route path="/checkout" element={<Checkout />} />
+              <Route
+                path="/order"
+                element={
+                  <PrivateRoute>
+                    <Order />
+                  </PrivateRoute>
+                }
+              >
+                {" "}
+              </Route>
             </Route>
-            <Route path="/reset-password" element={<ResetPwd/>}/>
-            <Route path="/forgot-password" element={<ForgotPwd/>}/>
-            <Route path="/reset-password/:resetToken" element={<ResetPwd/>}/>
-            <Route path="*" element={<ErrorPage/>}/>
+            <Route path="/reset-password" element={<ResetPwd />} />
+            <Route path="/forgot-password" element={<ForgotPwd />} />
+            <Route path="/reset-password/:resetToken" element={<ResetPwd />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

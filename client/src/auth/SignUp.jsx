@@ -32,7 +32,7 @@ const SignUp = ({ switchToSignIn }) => {
   const onSubmit = async (data) => {
     // setIsClicked(true);
     try {
-      const req = await fetch(`${baseUrl}/api/aut/sign-up`, {
+      const req = await fetch(`${baseUrl}/api/auth/sign-up`, {
         method: "POST",
         headers: {
           "content-Type": "application/json",
